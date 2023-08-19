@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> medcare. </a>
+
+        <nav class="navbar">
+            <a href="first_page.php">home</a>
+            <a href="signup.php">Sign Up</a>
+            <a href="#about">about</a>
+            <a href="#book">book</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <section class="book" id="book">
+
+        <h1 class="heading" style="margin-top: 51px;"> <span>Log</span> In</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="image/book-img.svg" alt="">
+            </div>
+
+            <form action="login.php" method="post">
+                <h3>Log In Here</h3>
+
+
+
+                <?php if (isset($_GET['error'])) { ?>
+                    <p class="error">
+                        <?php echo $_GET['error']; ?>
+                    </p>
+                    <?php } ?>
+
+                <input type="email" name="uname" class="box" placeholder="Enter Your Email Here"><br>
+
+
+                <input type="password" name="password" class="box" placeholder="Enter Your Password Here"><br>
+
+
+
+                <input type="submit" value="Log In" class="btn" style="  float:right;">
+                <a href="signup.php" class="ca">Create Your Account</a>
+            </form>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

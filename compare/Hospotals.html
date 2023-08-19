@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Creating Search Bar using HTML
+        CSS and Javascript
+    </title>
+
+    <!-- linking the stylesheet(CSS) -->
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        #searchbar {
+            border: 5px solid green;
+            margin-left: 62%;
+            padding: 15px;
+            border-radius: 20px;
+            margin-top: -436px;
+
+        }
+
+        input[type=text] {
+            width: 30%;
+            -webkit-transition: width 0.1s ease-in-out;
+            transition: width 0.15s ease-in-out;
+
+        }
+
+        /* When the input field gets focus,
+		change its width to 100% */
+        input[type=text]:focus {
+            width: 30%;
+        }
+
+        #list {
+            font-size: 1.5em;
+            margin-left: 90px;
+        }
+
+        .animals {
+            display: list-item;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> medcare. </a>
+
+        <nav class="navbar">
+            <a href="../home.php">home</a>
+            <a href="signup.php">Sign UP</a>
+            <a href="#about">about</a>
+            <a href="index.php">Login</a>
+            <a href="#book">book</a>
+            <a href="#review">review</a>
+            <a href="../blogs/paage1.html">blogs</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <section class="home" id="home">
+        <div class="image">
+            <img src="img/home-img copy.svg" alt="">
+
+
+        </div>
+        <h1 class="heading" style="font-weight:bolder">Find<span> &nbsp; Hospitals</span> </h1>
+
+
+
+
+        <!-- input tag -->
+        <input id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search Hospitals....."
+            onclick="record()">
+        <!-- <button type="button" onclick="record()" id="S3"></button> -->
+
+
+    </section>
+
+    <!-- ordered list -->
+    <ol id='list'>
+        <li class="animals">
+
+
+            <section class="cd-products-comparison-table" style="margin-left: -170px;">
+                <header>
+                    <h1 class="heading" style="font-weight:bolder"><span>Private</span></h1>
+
+                    <div class="actions">
+                        <a href="#0" class="reset">Reset</a>
+                        <a href="#0" class="filter">Compare</a>
+                    </div>
+                </header>
+
+                <div class="cd-products-table">
+                    <div class="features">
+                        <div class="top-info">List</div>
+                        <ul class="cd-features-list">
+                            <ol id='list'>
+                                <li>Name</li>
+                                <li>Location</li>
+                                <li>Doctors</li>
+                                <li>Location</li>
+                               
+                                <li>Website</li>
+                              
+                        </ul>
+                    </div> <!-- .features -->
+
+
+                    <div class="cd-products-wrapper">
+                        <ul class="cd-products-columns">
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/radhe multispe.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Radhe Multispecuality Hospitals</li>
+                                    <li>GandhiNagar</li>
+                                    <li>200+</li>
+                                    <li><a href="https://radhe-multispecialty-hospital-general-physician-nabh.business.site/" target="_blank"><input type="button" value="Go To Website" class="btn"> </a></li>
+                                    <li><a href="https://goo.gl/maps/towir9wszbAqQT6UA" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li> <!-- .product -->
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/smvs swami narayan.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Smvs SwamiNarayan Hospital</li>
+                                    <li>GandhiNagar</li>
+                                    <li>300+</li>
+                                    <li> <input type="button" value="Go to Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/vedant hospital.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Vedant Multispecuality Hospital</li>
+                                    <li>Ahmedabad</li>
+                                    <li>300+</li>
+                                    <li> <input type="button" value="Go to Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/lifeline ahmedabad.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>LifeLine Multispecuality Hospital</li>
+                                    <li>Ahmedabad</li>
+                                    <li>150+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/lifeline mehsana.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>LifeLine ICU And Hospital</li>
+                                    <li>Mehsana</li>
+                                    <li>100+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/deep mehsana.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Deep ICU And Hospital</li>
+                                    <li>Mehsana</li>
+                                    <li>150+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/nirmala hosputal.webp" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Private</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Nirmal Hospital Pvt. Ltd.</li>
+                                    <li>Surat</li>
+                                    <li>100+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </li>
+
+
+
+        <!-- 2nd set of medicine -->
+
+
+
+
+        <li class="animals">
+
+
+            <section class="cd-products-comparison-table" style="margin-left: -170px;">
+                <header>
+                    <h1 class="heading" style="font-weight:bolder"><span>Government</span></h1>
+
+                    <div class="actions">
+                        <a href="#0" class="reset">Reset</a>
+                        <a href="#0" class="filter">Filter</a>
+                    </div>
+                </header>
+
+                <div class="cd-products-table">
+                    <div class="features">
+                        <div class="top-info">Models</div>
+                        <ul class="cd-features-list">
+                            <ol id='list'>
+                                <li>Name</li>
+                                <li>Type</li>
+                                <li>Doctors</li>
+                                <li>Website</li>
+                                <li>Location</li>
+                        </ul>
+                    </div> <!-- .features -->
+
+                    <div class="cd-products-wrapper">
+                        <ul class="cd-products-columns">
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/civil hospital.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Government</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Civil Hospitals</li>
+                                    <li>GandhiNagar</li>
+                                    <li>200+</li>
+                                    <li> <a href="https://gandhinagar.nic.in/public-utility/gmers-ghandhinagar-civil-hospital/" target="_blank"><input type="button" value="Go To Website" class="btn"></a> </li>
+                                    <li> <a href="https://goo.gl/maps/YBcnA3rVwM6HpRDUA" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li> <!-- .product -->
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/anand multispeciality.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Government</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Anand Multispeciality</li>
+                                    <li>GandhiNagar</li>
+                                    <li>130+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/maghavir hospital.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Government</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Mahavir Hospital</li>
+                                    <li>Ahmedabad</li>
+                                    <li>200+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/solar hospital.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Government</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Solar Hospital</li>
+                                    <li>Ahmedabad</li>
+                                    <li>100+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/heritage.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Government</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Heritage Hospital</li>
+                                    <li>Surat</li>
+                                    <li>200+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/wings hospital.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Government</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Wings Hospitals</li>
+                                    <li>Surat</li>
+                                    <li>200+</li>
+                                    <li> <input type="button" value="Go To Website" class="btn"> </li>
+                                    <li> <input type="button" value="See Stores" class="btn"> </li>
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+            </section>
+        </li>
+    </ol>
+
+    <!-- linking javascript -->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <script src="comp.js"></script>
+
+
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-us ";
+
+            recognition.onresult = function (event) {
+                // console.log(event);
+                document.getElementById('searchbar').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

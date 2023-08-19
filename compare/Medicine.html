@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Creating Search Bar using HTML
+        CSS and Javascript
+    </title>
+
+    <!-- linking the stylesheet(CSS) -->
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        #searchbar {
+            border: 5px solid green;
+            margin-left: 62%;
+            padding: 15px;
+            border-radius: 20px;
+            margin-top: -436px;
+
+        }
+
+        input[type=text] {
+            width: 30%;
+            -webkit-transition: width 0.1s ease-in-out;
+            transition: width 0.15s ease-in-out;
+
+        }
+
+        /* When the input field gets focus,
+		change its width to 100% */
+        input[type=text]:focus {
+            width: 30%;
+        }
+
+        #list {
+            font-size: 1.5em;
+            margin-left: 90px;
+        }
+
+        .animals {
+            display: list-item;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> medcare. </a>
+
+            <nav class="navbar">
+                <a href="../home.php">home</a>
+                <a href="signup.php">Sign UP</a>
+                <a href="#about">about</a>
+                <a href="index.php">Login</a>
+                <a href="#book">book</a>
+                <a href="#review">review</a>
+                <a href="../blogs/paage1.html">blogs</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <section class="home" id="home">
+        <div class="image">
+            <img src="img/home-img copy.svg" alt="">
+
+
+        </div>
+        <h1 class="heading" style="font-weight:bolder">Find<span> &nbsp; Medicines</span> </h1>
+
+
+
+
+        <!-- input tag -->
+        <input id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search medicines....."
+            onclick="record()">
+        <!-- <button type="button" onclick="record()" id="S3"></button> -->
+
+
+    </section>
+
+    <!-- ordered list -->
+    <ol id='list'>
+        <li class="animals">
+
+
+            <section class="cd-products-comparison-table" style="margin-left: -170px;">
+                <header>
+                    <h1 class="heading" style="font-weight:bolder"><span>Headaches</span></h1>
+
+                    <div class="actions">
+                        <a href="#0" class="reset">Reset</a>
+                        <a href="#0" class="filter">Compare</a>
+                    </div>
+                </header>
+
+                <div class="cd-products-table">
+                    <div class="features">
+                        <div class="top-info">Models</div>
+                        <ul class="cd-features-list">
+                            <ol id='list'>
+                                <li>Name</li>
+                                <li>Type</li>
+                                <li>Prescripton</li>
+                                <li>Reason/Solution</li>
+                                <li>Location</li>
+                        </ul>
+                    </div> <!-- .features -->
+
+
+                    <div class="cd-products-wrapper">
+                        <ul class="cd-products-columns">
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/aspirin.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Aspirin</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li> <!-- .product -->
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/triphala churna.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Triphala Churna</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/paracetamol.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Paracetamol</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/nasya.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Nasya</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/ibuprofen.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Ibuprofen</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </li>
+
+
+
+        <!-- 2nd set of medicine -->
+
+
+
+
+        <li class="animals">
+
+
+            <section class="cd-products-comparison-table" style="margin-left: -170px;">
+                <header>
+                    <h1 class="heading" style="font-weight:bolder"><span>Vitamins</span></h1>
+
+                    <div class="actions">
+                        <a href="#0" class="reset">Reset</a>
+                        <a href="#0" class="filter">Filter</a>
+                    </div>
+                </header>
+
+                <div class="cd-products-table">
+                    <div class="features">
+                        <div class="top-info">Models</div>
+                        <ul class="cd-features-list">
+                            <ol id='list'>
+                                <li>Name</li>
+                                <li>Type</li>
+                                <li>Prescripton</li>
+                                <li>Reason/Solution</li>
+                                <li>Location</li>
+                        </ul>
+                    </div> <!-- .features -->
+
+                    <div class="cd-products-wrapper">
+                        <ul class="cd-products-columns">
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/i-methylfloate.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>VITAMINES</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>I-Methylfloate</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li> <!-- .product -->
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/niacin.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>VITAMINES</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Niacin</li>
+                                    <li>English</li>
+                                    <li>Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/smartveda.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>VITAMINES</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>SmartVeda</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/himalyan.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>VITAMINES</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Himalyan Organics</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/pyrodixone.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>VITAMINES</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Pyridoxine</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+                                </ul>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+
+            </section>
+        </li>
+
+
+        <!-- 3rd set of medicines -->
+
+        <li class="animals">
+
+
+            <section class="cd-products-comparison-table" style="margin-left: -170px;">
+                <header>
+                    <h1 class="heading" style="font-weight:bolder"><span>Stomach Pain</span></h1>
+
+                    <div class="actions">
+                        <a href="#0" class="reset">Reset</a>
+                        <a href="#0" class="filter">Filter</a>
+                    </div>
+                </header>
+
+                <div class="cd-products-table">
+                    <div class="features">
+                        <div class="top-info">Models</div>
+                        <ul class="cd-features-list">
+                            <ol id='list'>
+                                <li>Name</li>
+                                <li>Type</li>
+                                <li>Prescripton</li>
+                                <li>Reason/Solution</li>
+                                <li>Location</li>
+                        </ul>
+                    </div> <!-- .features -->
+
+                    <div class="cd-products-wrapper">
+                        <ul class="cd-products-columns">
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/Duclox.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Stomach Pain</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Dulcolax</li>
+                                    <li>English</li>
+                                    <li>Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+                                </ul>
+                            </li>
+                           <!-- .product -->
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/omeparazole.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Stomach Pain</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Ameprazole</li>
+                                    <li>English</li>
+                                    <li>Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/Zandu Pancharish.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Stomach Pain</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Zandu Pancharisht</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/pet safa.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Stomach Pain</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Pet Safa</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/Zantac.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Stomach Pain</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Zantac 360</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+
+            </section>
+        </li>
+
+
+
+
+
+
+        <!-- 4th sets of medicines -->
+
+
+        <li class="animals">
+
+
+            <section class="cd-products-comparison-table" style="margin-left: -170px;">
+                <header>
+                    <h1 class="heading" style="font-weight:bolder"><span>Headaches</span></h1>
+
+                    <div class="actions">
+                        <a href="#0" class="reset">Reset</a>
+                        <a href="#0" class="filter">Compare</a>
+                    </div>
+                </header>
+
+                <div class="cd-products-table">
+                    <div class="features">
+                        <div class="top-info">Models</div>
+                        <ul class="cd-features-list">
+                            <ol id='list'>
+                                <li>Name</li>
+                                <li>Type</li>
+                                <li>Prescripton</li>
+                                <li>Reason/Solution</li>
+                                <li>Location</li>
+                        </ul>
+                    </div> <!-- .features -->
+
+
+                    <div class="cd-products-wrapper">
+                        <ul class="cd-products-columns">
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/aspirin.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Aspirin</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li> <!-- .product -->
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/triphala churna.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Triphala Churna</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/paracetamol.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Paracetamol</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/nasya.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Nasya</li>
+                                    <li>Ayurvedic</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="product">
+                                <div class="top-info">
+                                    <div class="check"></div>
+                                    <img src="../product/image/ibuprofen.jpg" style="width: 151px; height: 143px;"
+                                        alt="product image">
+                                    <h3>Headaches</h3>
+                                </div> <!-- .top-info -->
+
+                                <ul class="cd-features-list">
+                                    <li>Ibuprofen</li>
+                                    <li>English</li>
+                                    <li>Not Required</li>
+                                    <li> <a href="../blogs/paage1.html" target="_blank"><input type="button" value="See Blogs" class="btn"></a> </li>
+                                    <li><a href="../product/index.html" target="_blank"><input type="button" value="See Stores" class="btn"></a> </li>
+
+                                </ul>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </li>
+    </ol>
+
+    <!-- linking javascript -->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <script src="comp.js"></script>
+
+
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-us ";
+
+            recognition.onresult = function (event) {
+                // console.log(event);
+                document.getElementById('searchbar').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
